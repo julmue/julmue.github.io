@@ -1,0 +1,8 @@
+#!/bin/bash
+
+pandoc ./content/projects.pandoc -o index.html \
+    --smart \
+    --standalone \
+    --toc \
+    --include-in-header=./html/header.html \
+    --include-after-body=./html/footer.html

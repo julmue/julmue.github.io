@@ -1,0 +1,198 @@
+## Projects
+
+Here are some of the projects I'm working on.
+
+### Crush - Interpreter For The Untyped Lambda Calculus
+
+*Crush* is a minimal interpreter for the untyped lambda calculus.
+It reads lamdba expressions from standard input and reduces them 
+applying one of the three reduction strategies:
+
+1. Normal-order reduction
+2. Call-By-Name
+3. Call-By-Value
+
+Also the reduction process can be traced.
+
+![](./images/onePlusOne.gif)
+
+I will extend the interpreter with some native
+data types (`Bool`, `Int`, `Char`, ...), and operations on these data types in the near future -
+Church encoding everything is intriguing but very inefficient.
+
+Furthermore runtime statistics will be implemented 
+(number of steps, depth of formula, ...).
+
+[Project Page](https://github.com/julmue/Crush)
+
+### Clank - Theorem Prover (Paraconsistent Propositional Logics)
+
+A paraconsistent logic is a logic where the consequence relation is not explosive,
+i. e. where the law ${\{A, ¬A\} ⊨ B}$ does not hold.
+A very good introduction can be found on the 
+[Stanford Encyclopedia of Philosophie](http://plato.stanford.edu/entries/logic-paraconsistent/).
+
+An explosive consequence relation is important for mathematics, but a nuisance in domains that 
+have to operate on sets of possibly inconsistent premisses like 
+medical assistance systems of applications in robotics;
+these are the domains where paraconsistent logics shine.
+
+*Clank* is a prover for various systems of paraconsistent propositional logic 
+and also vanilla propositional logic:
+
+1. PC: Vanilla propositional calculus
+2. K3: System Kleen
+3. L3: System Lukaszewic
+4. LP: System Priest
+5. RM: System Routly-Meyer
+
+[Project Page](https://github.com/julmue/Clank)
+
+### Various Type Checkers For Typed Lambda Calculi
+
+Type theory is a very deep and interesting domain. 
+It connects category theory with constructive logics, mathematics and functional programming 
+languages. A very good introduction about its origins and recent developments can be found 
+[here](http://plato.stanford.edu/entries/type-theory/).
+
+Of course the canonical way of learning type theory is by implementing the systems 
+presented in Benjamin Pierce's Book 
+[Types and Programming languages](https://www.cis.upenn.edu/~bcpierce/tapl/).
+This is my attempt at it using Haskell and the framework *Crush* provides:
+
+* Simply typed lambda calculus
+* System $λ2$
+* System $λω$
+* System $λ2ω$
+* System $λP$
+* Calculus Of Constructions
+
+I will implement each of the systems as an Church-syle lambda calculus (so no type-erasure) 
+in two variants:
+
+1. An bare-bones version only using a minimum of primitives;
+   this system can be regarded as a minimalistic proof assistant.
+2. An extended version with support for native data types, records, variants 
+   and possibly/optionally unbound recursion.
+
+This is my favourite project for the upcoming year as there is so much to explore!
+
+[Project Page](https://github.com/julmue/LambdaTypeCheckers)
+
+### SAT - A Sat Solver In Prolog
+
+*SAT* is an acronym for the *satisfiability problem of classical propositional logics* -
+the problem to decide if a given formula in propositional logic has a model.
+The problem is decidable - but it is NP-complete.
+
+A sat solver implements an efficient decision procedure to solve the satisfiability problem.
+While those procedures are technically still NP-complete most of the cases can be solved in 
+a very short time thanks to clever heuristics that quickly shrink the solution space.
+
+This procedure is widely used in industrial applications: 
+A lot of configuration and planning problems can be modeled as propositional formulas
+and then solved via a sat-solver.
+Application domains range form buildability proofs in the automotive industry 
+to formal verification of circuit-designs relied on by semiconductor manufacturers.
+
+This project contains a Sat-solver for logic formulas in the DMAIC format 
+written in the logic programming language Prolog.
+
+[Project Page](https://github.com/julmue/DpllDimacSatSolver)
+
+### Introduction To The Curry-Howard-Isomorphism In Haskell
+
+The Curry-Howard-isomorphism is a very deep connection between 
+constructive logics, typed lambda calculi and category theory.
+It turns out, that simply typed lambda calculus and intuitionistic propositional 
+logic are essentially the same thing, and both have a deep connection to 
+cartesian-closed categories in category theory. 
+This connection can be expanded to richer logics and ultimately culminating
+in powerful systems like Per-Martin-Löfs calculus of constructions,
+which can be used as an alternative fundament of constructive mathematics.
+This has a lot of real-world applications especially in the domain of 
+functional programming and proof assistants.
+
+The page contents some of the fundamental theorems and mechanisms 
+of the isomorphism implemented in the functional language Haskell.
+
+[Project Page](https://github.com/julmue/HaskellCurryHoward)
+
+### Formal Verification In Coq
+
+The Coq theorem prover is a proof assistance environment build around an 
+implementation of the Calculus of Inductive Constructions,
+an extension of the Calculus of Constructions with inductive data types.
+
+It is possible to encode and proof constructive mathematics and logics 
+as well as functional programs in this calculus and extract them to 
+general purpose functional programming languages such as Haskell and OCaml.
+This allows for correctness proofs of e.g. an booking algorithm in banking.
+
+Here, proving is programming and programming is proving!
+
+I'm working through Pierce et al 
+[Software Foundations](https://www.cis.upenn.edu/~bcpierce/sf/current/index.html),
+a book where various programming languages are implemented 
+and have their properties proven with the Coq theorem prover.
+
+Software foundations is a huge book and Coq is a huge system 
+so this may take some time.
+
+[Project Page](https://github.com/julmue/Software-Foundations)
+
+
+### Laser Scanning
+
+As an engineer one of my specializations is technical optics and industrial image processing:
+My bachelor thesis was about designing and implementing a prototype laser scanner
+for the R&D department of [Herrenknecht AG](https://www.herrenknecht.com/en/home.html).
+Its purpose is to detect the wear of tunnel-boring machine cutting-tools whilst tunneling. 
+Data acquisition via a laser scanner is a perfect fit for this kind of harsh environment.
+
+![A wooden owl scanned by a laser scanner with software implemented in MATLAB](./images/owls.png "test")
+
+To proof that laser triangulation is a suitable measurement method 
+for our use-case and before attempting to build a full-scale and very expensive prototype 
+I build a simple laser-scanner from an of-the-shelf webcam and some stepper motors.
+The triangulation algorithm as well as the control of the stepper motors are implemented in 
+MATLAB.
+The images above are the result of the first scans.
+
+## About Me 
+
+![](./images/Me.png)
+
+My name is Julian Müller and I'm a mechanical engineer / logician and functional programming enthusiast 
+(see my [CV](./files/cv.pdf)).
+
+### Logics And Computer Science
+
+Currently I'm completing my Masters degree in logics (University Leipzig) with a thesis about 
+the [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus), 
+a mathematical device invented in the 1930s by Alonzo Church 
+to explore the concept of computability. 
+The lambda calculus played a crucial rule in solving Hilbert's 
+[Entscheidungsproblem](https://en.wikipedia.org/wiki/Entscheidungsproblem)
+and still is one of the most valuable and versatile formal tools:
+it can be regarded as a paradigmatic programming language
+that lays the foundation for functional languages like Haskell, Lisp, Scala, OCaml and many others
+as well as an important tool to investigate and formalize the semantics of
+programming languages in general.
+
+Besides poring over books about lambda calculus and type theory I 
+enjoy writing code in the purely functional language Haskell,
+(functional) programming in general, and formal verification via SAT/SMT solvers
+or proof assistants based on the Curry-Howard-isomorphism like Coq.
+
+### Mechanical Engineering
+
+I graduated as a B.E. in Mechanical Engineering from the RFH Köln (Cologne).
+During my curriculum I worked about two years in the R&D department of 
+[Herrenknecht AG](https://www.herrenknecht.com/en/home.html),
+a company that builds enormous tunnel boring machines.
+First as an intern, later to write my Bachelor thesis and then as an working student to 
+finish the project.
+This was a great time and I learned a lot along the way: 
+I had the opportunity to contribute to many interesting projects from pattern recognition
+in image data to designing prototypes for nuclear research facilities.

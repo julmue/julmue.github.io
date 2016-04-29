@@ -1,53 +1,122 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Julmue.GitHub.io by julmue</title>
-  </head>
-
-  <body>
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>Julmue.GitHub.io</h1>
-          <h2>Important repositories</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/julmue" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h3>
-<a id="test" class="anchor" href="#test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test</h3>
-
-<p>This are some of my dearest repositories</p>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <header>
+  <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+  <h1 id="github">julmue.github.io</h1> 
+  <p id="greeting">Hi, I'm <a href="#about-me">Julian</a>. Welcome to my projects! </p> 
+  </p>
+  </header>
+</head>
+<body>
+<div id="TOC">
 <ul>
-<li><a href="https://github.com/julmue/Clank">Clank theorem prover</a></li>
-<li><a href="https://github.com/julmue/prologDpllDimacSatsolver">Sat solver (Prolog)</a></li>
+<li><a href="#projects">Projects</a><ul>
+<li><a href="#crush---interpreter-for-the-untyped-lambda-calculus">Crush - Interpreter For The Untyped Lambda Calculus</a></li>
+<li><a href="#clank---theorem-prover-paraconsistent-propositional-logics">Clank - Theorem Prover (Paraconsistent Propositional Logics)</a></li>
+<li><a href="#various-type-checkers-for-typed-lambda-calculi">Various Type Checkers For Typed Lambda Calculi</a></li>
+<li><a href="#sat---a-sat-solver-in-prolog">SAT - A Sat Solver In Prolog</a></li>
+<li><a href="#introduction-to-the-curry-howard-isomorphism-in-haskell">Introduction To The Curry-Howard-Isomorphism In Haskell</a></li>
+<li><a href="#formal-verification-in-coq">Formal Verification In Coq</a></li>
+<li><a href="#laser-scanning">Laser Scanning</a></li>
+</ul></li>
+<li><a href="#about-me">About Me</a><ul>
+<li><a href="#logics-and-computer-science">Logics And Computer Science</a></li>
+<li><a href="#mechanical-engineering">Mechanical Engineering</a></li>
+</ul></li>
 </ul>
+</div>
+<h2 id="projects">Projects</h2>
+<p>Here are some of the projects I’m working on.</p>
+<h3 id="crush---interpreter-for-the-untyped-lambda-calculus">Crush - Interpreter For The Untyped Lambda Calculus</h3>
+<p><em>Crush</em> is a minimal interpreter for the untyped lambda calculus. It reads lamdba expressions from standard input and reduces them applying one of the three reduction strategies:</p>
+<ol style="list-style-type: decimal">
+<li>Normal-order reduction</li>
+<li>Call-By-Name</li>
+<li>Call-By-Value</li>
+</ol>
+<p>Also the reduction process can be traced.</p>
+<div class="figure">
+<img src="./images/onePlusOne.gif" alt="" />
 
-<p>That's it for now ...</p>
-        </section>
+</div>
+<p>I will extend the interpreter with some native data types (<code>Bool</code>, <code>Int</code>, <code>Char</code>, …), and operations on these data types in the near future - Church encoding everything is intriguing but very inefficient.</p>
+<p>Furthermore runtime statistics will be implemented (number of steps, depth of formula, …).</p>
+<p><a href="https://github.com/julmue/Crush">Project Page</a></p>
+<h3 id="clank---theorem-prover-paraconsistent-propositional-logics">Clank - Theorem Prover (Paraconsistent Propositional Logics)</h3>
+<p>A paraconsistent logic is a logic where the consequence relation is not explosive, i. e. where the law <span class="math inline">{<em>A</em>, ¬<em>A</em>}⊨<em>B</em></span> does not hold. A very good introduction can be found on the <a href="http://plato.stanford.edu/entries/logic-paraconsistent/">Stanford Encyclopedia of Philosophie</a>.</p>
+<p>An explosive consequence relation is important for mathematics, but a nuisance in domains that have to operate on sets of possibly inconsistent premisses like medical assistance systems of applications in robotics; these are the domains where paraconsistent logics shine.</p>
+<p><em>Clank</em> is a prover for various systems of paraconsistent propositional logic and also vanilla propositional logic:</p>
+<ol style="list-style-type: decimal">
+<li>PC: Vanilla propositional calculus</li>
+<li>K3: System Kleen</li>
+<li>L3: System Lukaszewic</li>
+<li>LP: System Priest</li>
+<li>RM: System Routly-Meyer</li>
+</ol>
+<p><a href="https://github.com/julmue/Clank">Project Page</a></p>
+<h3 id="various-type-checkers-for-typed-lambda-calculi">Various Type Checkers For Typed Lambda Calculi</h3>
+<p>Type theory is a very deep and interesting domain. It connects category theory with constructive logics, mathematics and functional programming languages. A very good introduction about its origins and recent developments can be found <a href="http://plato.stanford.edu/entries/type-theory/">here</a>.</p>
+<p>Of course the canonical way of learning type theory is by implementing the systems presented in Benjamin Pierce’s Book <a href="https://www.cis.upenn.edu/~bcpierce/tapl/">Types and Programming languages</a>. This is my attempt at it using Haskell and the framework <em>Crush</em> provides:</p>
+<ul>
+<li>Simply typed lambda calculus</li>
+<li>System <span class="math inline"><em>λ</em>2</span></li>
+<li>System <span class="math inline"><em>λ</em><em>ω</em></span></li>
+<li>System <span class="math inline"><em>λ</em>2<em>ω</em></span></li>
+<li>System <span class="math inline"><em>λ</em><em>P</em></span></li>
+<li>Calculus Of Constructions</li>
+</ul>
+<p>I will implement each of the systems as an Church-syle lambda calculus (so no type-erasure) in two variants:</p>
+<ol style="list-style-type: decimal">
+<li>An bare-bones version only using a minimum of primitives; this system can be regarded as a minimalistic proof assistant.</li>
+<li>An extended version with support for native data types, records, variants and possibly/optionally unbound recursion.</li>
+</ol>
+<p>This is my favourite project for the upcoming year as there is so much to explore!</p>
+<p><a href="https://github.com/julmue/LambdaTypeCheckers">Project Page</a></p>
+<h3 id="sat---a-sat-solver-in-prolog">SAT - A Sat Solver In Prolog</h3>
+<p><em>SAT</em> is an acronym for the <em>satisfiability problem of classical propositional logics</em> - the problem to decide if a given formula in propositional logic has a model. The problem is decidable - but it is NP-complete.</p>
+<p>A sat solver implements an efficient decision procedure to solve the satisfiability problem. While those procedures are technically still NP-complete most of the cases can be solved in a very short time thanks to clever heuristics that quickly shrink the solution space.</p>
+<p>This procedure is widely used in industrial applications: A lot of configuration and planning problems can be modeled as propositional formulas and then solved via a sat-solver. Application domains range form buildability proofs in the automotive industry to formal verification of circuit-designs relied on by semiconductor manufacturers.</p>
+<p>This project contains a Sat-solver for logic formulas in the DMAIC format written in the logic programming language Prolog.</p>
+<p><a href="https://github.com/julmue/DpllDimacSatSolver">Project Page</a></p>
+<h3 id="introduction-to-the-curry-howard-isomorphism-in-haskell">Introduction To The Curry-Howard-Isomorphism In Haskell</h3>
+<p>The Curry-Howard-isomorphism is a very deep connection between constructive logics, typed lambda calculi and category theory. It turns out, that simply typed lambda calculus and intuitionistic propositional logic are essentially the same thing, and both have a deep connection to cartesian-closed categories in category theory. This connection can be expanded to richer logics and ultimately culminating in powerful systems like Per-Martin-Löfs calculus of constructions, which can be used as an alternative fundament of constructive mathematics. This has a lot of real-world applications especially in the domain of functional programming and proof assistants.</p>
+<p>The page contents some of the fundamental theorems and mechanisms of the isomorphism implemented in the functional language Haskell.</p>
+<p><a href="https://github.com/julmue/HaskellCurryHoward">Project Page</a></p>
+<h3 id="formal-verification-in-coq">Formal Verification In Coq</h3>
+<p>The Coq theorem prover is a proof assistance environment build around an implementation of the Calculus of Inductive Constructions, an extension of the Calculus of Constructions with inductive data types.</p>
+<p>It is possible to encode and proof constructive mathematics and logics as well as functional programs in this calculus and extract them to general purpose functional programming languages such as Haskell and OCaml. This allows for correctness proofs of e.g. an booking algorithm in banking.</p>
+<p>Here, proving is programming and programming is proving!</p>
+<p>I’m working through Pierce et al <a href="https://www.cis.upenn.edu/~bcpierce/sf/current/index.html">Software Foundations</a>, a book where various programming languages are implemented and have their properties proven with the Coq theorem prover.</p>
+<p>Software foundations is a huge book and Coq is a huge system so this may take some time.</p>
+<p><a href="https://github.com/julmue/Software-Foundations">Project Page</a></p>
+<h3 id="laser-scanning">Laser Scanning</h3>
+<p>As an engineer one of my specializations is technical optics and industrial image processing: My bachelor thesis was about designing and implementing a prototype laser scanner for the R&amp;D department of <a href="https://www.herrenknecht.com/en/home.html">Herrenknecht AG</a>. Its purpose is to detect the wear of tunnel-boring machine cutting-tools whilst tunneling. Data acquisition via a laser scanner is a perfect fit for this kind of harsh environment.</p>
+<div class="figure">
+<img src="./images/owls.png" title="test" alt="A wooden owl scanned by a laser scanner with software implemented in MATLAB" />
+<p class="caption">A wooden owl scanned by a laser scanner with software implemented in MATLAB</p>
+</div>
+<p>To proof that laser triangulation is a suitable measurement method for our use-case and before attempting to build a full-scale and very expensive prototype I build a simple laser-scanner from an of-the-shelf webcam and some stepper motors. The triangulation algorithm as well as the control of the stepper motors are implemented in MATLAB. The images above are the result of the first scans.</p>
+<h2 id="about-me">About Me</h2>
+<div class="figure">
+<img src="./images/Me.png" alt="" />
 
-        <footer>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
-  </body>
+</div>
+<p>My name is Julian Müller and I’m a mechanical engineer / logician and functional programming enthusiast (see my <a href="./files/cv.pdf">CV</a>).</p>
+<h3 id="logics-and-computer-science">Logics And Computer Science</h3>
+<p>Currently I’m completing my Masters degree in logics (University Leipzig) with a thesis about the <a href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda calculus</a>, a mathematical device invented in the 1930s by Alonzo Church to explore the concept of computability. The lambda calculus played a crucial rule in solving Hilbert’s <a href="https://en.wikipedia.org/wiki/Entscheidungsproblem">Entscheidungsproblem</a> and still is one of the most valuable and versatile formal tools: it can be regarded as a paradigmatic programming language that lays the foundation for functional languages like Haskell, Lisp, Scala, OCaml and many others as well as an important tool to investigate and formalize the semantics of programming languages in general.</p>
+<p>Besides poring over books about lambda calculus and type theory I enjoy writing code in the purely functional language Haskell, (functional) programming in general, and formal verification via SAT/SMT solvers or proof assistants based on the Curry-Howard-isomorphism like Coq.</p>
+<h3 id="mechanical-engineering">Mechanical Engineering</h3>
+<p>I graduated as a B.E. in Mechanical Engineering from the RFH Köln (Cologne). During my curriculum I worked about two years in the R&amp;D department of <a href="https://www.herrenknecht.com/en/home.html">Herrenknecht AG</a>, a company that builds enormous tunnel boring machines. First as an intern, later to write my Bachelor thesis and then as an working student to finish the project. This was a great time and I learned a lot along the way: I had the opportunity to contribute to many interesting projects from pattern recognition in image data to designing prototypes for nuclear research facilities.</p>
+ <footer>
+  <p id="contact">Get in touch with me:<a href="mailto:@example.com">
+  jul.mue@hotmail.de</a>.</p>
+</footer>
+</body>
 </html>
