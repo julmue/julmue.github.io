@@ -56,7 +56,7 @@
 <ol style="list-style-type: decimal">
 <li>PC: Vanilla propositional calculus</li>
 <li>K3: System Kleen</li>
-<li>L3: System Lukaszewic</li>
+<li>L3: System Lucasiewicz</li>
 <li>LP: System Priest</li>
 <li>RM: System Routly-Meyer</li>
 </ol>
@@ -86,11 +86,11 @@
 <p>This project contains a Sat-solver for logic formulas in the DMAIC format written in the logic programming language Prolog.</p>
 <p><a href="https://github.com/julmue/DpllDimacSatSolver">Project Page</a></p>
 <h3 id="introduction-to-the-curry-howard-isomorphism-in-haskell">Introduction To The Curry-Howard-Isomorphism In Haskell</h3>
-<p>The Curry-Howard-isomorphism is a very deep connection between constructive logics, typed lambda calculi and category theory. It turns out, that simply typed lambda calculus and intuitionistic propositional logic are essentially the same thing, and both have a deep connection to cartesian-closed categories in category theory. This connection can be expanded to richer logics and ultimately culminating in powerful systems like Per-Martin-Löfs calculus of constructions, which can be used as an alternative fundament of constructive mathematics. This has a lot of real-world applications especially in the domain of functional programming and proof assistants.</p>
+<p>The Curry-Howard-isomorphism is a fundamental connection between constructive logics, typed lambda calculi and category theory. It turns out, that simply typed lambda calculus and intuitionistic propositional logic are essentially the same thing, and both have a deep connection to cartesian-closed categories in category theory. This connection extends to richer logics and type theories and culminates in powerful systems like the Calculus of Constructions, which can be used as an alternative foundation for constructive mathematics. This has a lot of real-world applications especially in the domain of functional programming and proof assistants.</p>
 <p>The page contents some of the fundamental theorems and mechanisms of the isomorphism implemented in the functional language Haskell.</p>
 <p><a href="https://github.com/julmue/HaskellCurryHoward">Project Page</a></p>
 <h3 id="formal-verification-in-coq">Formal Verification In Coq</h3>
-<p>The Coq theorem prover is a proof assistance environment build around an implementation of the Calculus of Inductive Constructions, an extension of the Calculus of Constructions with inductive data types.</p>
+<p>The Coq theorem prover is a proof assistance environment build around an implementation of the Calculus of Constructions, a very powerful type theory.</p>
 <p>It is possible to encode and proof constructive mathematics and logics as well as functional programs in this calculus and extract them to general purpose functional programming languages such as Haskell and OCaml. This allows for correctness proofs of e.g. an booking algorithm in banking.</p>
 <p>Here, proving is programming and programming is proving!</p>
 <p>I’m working through Pierce et al <a href="https://www.cis.upenn.edu/~bcpierce/sf/current/index.html">Software Foundations</a>, a book where various programming languages are implemented and have their properties proven with the Coq theorem prover.</p>

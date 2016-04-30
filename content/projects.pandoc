@@ -102,14 +102,14 @@ written in the logic programming language Prolog.
 
 ### Introduction To The Curry-Howard-Isomorphism In Haskell
 
-The Curry-Howard-isomorphism is a very deep connection between 
+The Curry-Howard-isomorphism is a fundamental connection between 
 constructive logics, typed lambda calculi and category theory.
 It turns out, that simply typed lambda calculus and intuitionistic propositional 
 logic are essentially the same thing, and both have a deep connection to 
 cartesian-closed categories in category theory. 
-This connection can be expanded to richer logics and ultimately culminating
-in powerful systems like Per-Martin-Löfs calculus of constructions,
-which can be used as an alternative fundament of constructive mathematics.
+This connection extends to richer logics and type theories and culminates 
+in powerful systems like the Calculus of Constructions,
+which can be used as an alternative foundation for constructive mathematics.
 This has a lot of real-world applications especially in the domain of 
 functional programming and proof assistants.
 
@@ -121,8 +121,7 @@ of the isomorphism implemented in the functional language Haskell.
 ### Formal Verification In Coq
 
 The Coq theorem prover is a proof assistance environment build around an 
-implementation of the Calculus of Inductive Constructions,
-an extension of the Calculus of Constructions with inductive data types.
+implementation of the Calculus of Constructions, a very powerful type theory.
 
 It is possible to encode and proof constructive mathematics and logics 
 as well as functional programs in this calculus and extract them to 
