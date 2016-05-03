@@ -30,7 +30,7 @@ Furthermore runtime statistics will be implemented
 A paraconsistent logic is a logic where the consequence relation is not explosive,
 i. e. where the law ${\{A, ¬A\} ⊨ B}$ does not hold.
 A very good introduction can be found on the 
-[Stanford Encyclopedia of Philosophie](http://plato.stanford.edu/entries/logic-paraconsistent/).
+[Stanford Encyclopedia of Philosophy](http://plato.stanford.edu/entries/logic-paraconsistent/).
 
 An explosive consequence relation is important for mathematics, but a nuisance in domains that 
 have to operate on sets of possibly inconsistent premisses like 
