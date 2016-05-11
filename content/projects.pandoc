@@ -25,6 +25,17 @@ Furthermore, runtime statistics will be implemented
 
 [Project Page](https://github.com/julmue/Crush)
 
+
+### stl - Interpreter For The Simply Typed Lambda Calculus
+
+*stl* is an interpreter for the simply typed lambda calculus (with some extensions);
+typing is explicit.
+
+The program read expressions expressions from the standard input and
+returns their type to standard error as well as their normal form to standard out.
+
+[Project Page](https://github.com/julmue/stl)
+
 ### Clank - Theorem Prover (Paraconsistent Propositional Logics)
 
 A paraconsistent logic is a logic where the consequence relation is not explosive,
