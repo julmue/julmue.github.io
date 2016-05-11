@@ -182,7 +182,7 @@ My name is Julian Müller and I'm a mechanical engineer / logician and functiona
 
 Currently I am completing my Master's degree in logics (University Leipzig) 
 writing my thesis about the [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus). 
-a mathematical device invented in the 1930s by Alonzo Church 
+The lambda calculus is a mathematical device invented in the 1930s by Alonzo Church 
 to explore the concept of computability. 
 The lambda calculus played a crucial rule in solving Hilbert's 
 [Entscheidungsproblem](https://en.wikipedia.org/wiki/Entscheidungsproblem)
@@ -193,7 +193,7 @@ Moreover, it is an important tool to investigate and formalize the semantics of
 programming languages in general.
 
 Besides poring over books about lambda calculus and type theory I 
-enjoy writing code in the purely functional language Haskell and
+enjoy writing code in the purely functional programming language Haskell and
 (functional) programming in general. In addition I enjoy formal verification via SAT/SMT solvers
 or proof assistants based on the Curry-Howard-isomorphism like Coq.
 
