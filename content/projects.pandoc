@@ -31,8 +31,8 @@ Furthermore, runtime statistics will be implemented
 *stl* is an interpreter for the simply typed lambda calculus (with some extensions);
 typing is explicit.
 
-The program read expressions expressions from the standard input and
-returns their type to standard error as well as their normal form to standard out.
+The program reads expressions from the standard input and
+returns their type to standard error as well as their normal form to standard output.
 
 [Project Page](https://github.com/julmue/stl)
 
